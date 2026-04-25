@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Technology</title>
+    <title>Technical Skills List</title>
+    <link rel="stylesheet" href="style.css">
 
-<script>
-    // Alert message when page loads
-    window.onload = function() {
-        alert("Welcome to AI Technology Page!");
+    <script>
+        window.onload = function() {
+            // Alert message
+            alert("Welcome to Technical Skills Page!");
 
-        // Prompt asking user name
-        let userName = prompt("Enter your name:");
+            // Prompt input
+            let name = prompt("Enter your name:");
 
-        if(userName != null && userName != "") {
-            alert("Hello " + userName + "! Explore AI Technology.");
-        } else {
-            alert("Welcome Guest!");
+            // Response alert
+            if (name && name.trim() !== "") {
+                alert("Hello " + name + "! Here are your technical skills.");
+            } else {
+                alert("Hello Guest! Explore the skills list.");
+            }
         }
-    }
-</script>
+    </script>
 
 </head>
+
 <body>
 
-<h1>AI Technology: Innovation, Automation, and the Future</h1>
+<div class="container">
 
-<h2>Artificial Intelligence</h2>
-<p>
-Artificial Intelligence (AI) is transforming the world by enabling machines to think and learn like humans. It is used in various fields such as healthcare, education, and business to improve efficiency and decision-making.
-</p>
+<h1>Technical Skills</h1>
 
-<h2>Machine Learning</h2>
-<p>
-Machine Learning is a part of AI that allows systems to learn from data and improve over time without being explicitly programmed. It is widely used in recommendations, predictions, and data analysis.
-</p>
+<ol>
+    <li>Programming Languages
+        <ul>
+            <li>C</li>
+            <li>Python</li>
+            <li>Java</li>
+        </ul>
+    </li>
 
-<h2>Robotics</h2>
-<p>
-Robotics combines AI with machines to perform tasks automatically. Robots are used in industries, hospitals, and even homes to assist humans and increase productivity.
-</p>
+    <li>Tools and Technologies
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>Git</li>
+            <li>Linux</li>
+        </ul>
+    </li>
 
-<h2>Natural Language Processing</h2>
-<p>
-Natural Language Processing (NLP) helps computers understand and respond to human language. It is used in chatbots, virtual assistants, and translation systems.
-</p>
+    <li>Core Computer Science
+        <ul>
+            <li>Programming</li>
+            <li>Data Structures</li>
+            <li>Algorithms</li>
+        </ul>
+    </li>
+</ol>
 
-<h2>Future of AI</h2>
-<p>
-The future of AI is full of possibilities. It will continue to evolve and impact every part of our lives, making technology smarter and more helpful.
-</p>
+<a href="https://github.com/prarthanarnayak-lgtm/4SEM-FET" target="_blank">
+    My Resume
+</a>
 
-<a href="https://github.com/prarthanarnayak-lgtm/4SEM-FET/">Learn More About AI</a>
+</div>
 
 </body>
 </html>
