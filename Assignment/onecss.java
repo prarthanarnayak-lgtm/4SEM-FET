@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radhika Krishna B | Portfolio</title>
+    <style>
+        /* Minimalist Modern Style */
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        h1 { margin-bottom: 0; color: #000; }
+        h2 { margin-top: 5px; color: #666; font-weight: 400; font-size: 1.2rem; }
+        h3 { margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+       
+        p { color: #444; }
+        b { color: #000; }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: opacity 0.2s;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Hello, I am</p>
+    <h1>Radhika Krishna B</h1>
+    <h2>Aspiring Software Engineer</h2>
+   
+    <h3>Welcome to my portfolio</h3>
+    <p>
+        I am an engineering student passionate about building real-world
+        solutions through technology. I enjoy learning new skills and
+        creating meaningful projects.
+    </p>
+
+    <h3>My Tech Stacks</h3>
+    <p>
+        I work with <b>HTML</b> and <b>CSS</b> for building webpages,
+        <b>MySQL</b> for managing databases, and I am currently learning
+        <b>JavaScript</b> to make websites interactive.
+    </p>
+
+    <button onclick="startInteraction()">Connect with me</button>
+
+    <script>
+        function startInteraction() {
+            const visitorName = prompt("Hi! I'm Radhika. What's your name?");
+           
+            if (visitorName) {
+                alert("Welcome to my site, " + visitorName + "! Thanks for stopping by.");
+            } else {
+                alert("Thanks for visiting my portfolio!");
+            }
+        }
+    </script>
+
+</body>
+</html>
