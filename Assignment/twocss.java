@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radhika | Skill Validator</title>
+    <style>
+        body { font: 14px sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; }
+        .card { background: #fff; padding: 20px; border-radius: 10px; width: 320px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .page { display: none; } .active { display: block; }
+        nav { display: flex; gap: 5px; margin-bottom: 15px; }
+        button { flex: 1; cursor: pointer; padding: 8px; border: none; border-radius: 4px; background: #2563eb; color: #fff; }
+        input { width: 92%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        .item { background: #f8f9fa; padding: 8px; margin: 4px 0; border-radius: 4px; border-left: 4px solid #2563eb; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <nav><button onclick="tab('view')">My Stack</button><button onclick="tab('add')">Add New</button></nav>
+
+        <div id="view" class="page active"><div id="list"></div></div>
+
+        <div id="add" class="page">
+            <input type="text" id="inp" placeholder="Enter tech (e.g. Java)">
+            <button onclick="add()">Validate & Add</button>
+        </div>
+    </div>
+
+    <script>
+        let mySkills = ["HTML", "CSS", "MYSQL"];
+        // STRICT DATABASE: Only these real-world skills are allowed
+        const APPROVED = ["JAVASCRIPT", "PYTHON", "JAVA", "REACT", "C++", "NODEJS", "AWS", "DOCKER", "TYPESCRIPT", "MONGODB"];
+
+        const tab = (id) => {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            if(id === 'view') render();
+        }
+
+        const render = () => {
+            document.getElementById('list').innerHTML = mySkills.map(s => `<div class="item">${s}</div>`).join('');
+        }
+
+        const add = () => {
+            const val = document.getElementById('inp').value.trim().toUpperCase();
+           
+            if (!val) return alert("Enter a name!");
+            if (mySkills.includes(val)) return alert("Already in your list!");
+
+            // CRITICAL CHECK: Does it exist in the real-world tech list?
+            if (APPROVED.includes(val)) {
+                mySkills.push(val);
+                alert("Verified & Added!");
+                document.getElementById('inp').value = "";
+                tab('view');
+            } else {
+                alert(`DENIED: "${val}" is not a recognized industry skill.`);
+            }
+        }
+        render();
+    </script>
+</body>
+</html>
